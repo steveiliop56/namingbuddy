@@ -3,7 +3,7 @@
   "displayName": "namingbuddy",
   "description": "A simple extension to help you name your variables/classes/functions using an ollama backend",
   "repository": "https://github.com/steveiliop56/namingbuddy",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.90.0"
   },

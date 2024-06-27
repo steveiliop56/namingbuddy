@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: extension
-          path: ./extension.vsix
+          path: extension.vsix
 
   release:
     runs-on: ubuntu-latest
@@ -53,17 +53,14 @@ jobs:
           name: extension
           path: extension
 
-      - name: test
-        run: ls -lah extension
+      - name: Rename action
+        run: cp extension/extension.vsix namingbuddy-${{ needs.create-tag.outputs.tagname }}.vsix
 
-      # - name: Rename action
-      #   run: mv extension.vsix ./namingbuddy-${{ needs.create-tag.outputs.tagname }}.vsix
-
-      # - name: Create release
-      #   uses: softprops/action-gh-release@v2
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     tag_name: ${{ needs.create-tag.outputs.tagname }}
-      #     name: ${{ needs.create-tag.outputs.tagname }}
-      #     files: namingbuddy-${{ needs.create-tag.outputs.tagname }}.vsix
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ needs.create-tag.outputs.tagname }}
+          name: ${{ needs.create-tag.outputs.tagname }}
+          files: namingbuddy-${{ needs.create-tag.outputs.tagname }}.vsix

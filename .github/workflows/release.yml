@@ -53,17 +53,14 @@ jobs:
           name: extension
           path: extension.vsix
 
-      - name: Check where the file is downloaded
-        run: ls
+      - name: Rename action
+        run: mv extension/extension.vsix namingbuddy-${{ needs.create-tag.outputs.tagname }}.vsix
 
-      # - name: Rename action
-      #   run: mv extension.vsix namingbuddy-${{ needs.create-tag.outputs.tagname }}.vsix
-
-      # - name: Create release
-      #   uses: softprops/action-gh-release@v2
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     tag_name: ${{ needs.create-tag.outputs.tagname }}
-      #     name: ${{ needs.create-tag.outputs.tagname }}
-      #     files: namingbuddy-${{ needs.create-tag.outputs.tagname }}.vsix
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ needs.create-tag.outputs.tagname }}
+          name: ${{ needs.create-tag.outputs.tagname }}
+          files: namingbuddy-${{ needs.create-tag.outputs.tagname }}.vsix

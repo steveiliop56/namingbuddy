@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [create-tag, build-extension]
     steps:
-    - name: Download Extension
+      - name: Download Extension
         uses: actions/download-artifact@v4
         with:
           name: extension

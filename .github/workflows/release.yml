@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: extension
-          path: extension.vsix
+          path: ./extension.vsix
 
   release:
     runs-on: ubuntu-latest
@@ -54,7 +54,7 @@ jobs:
           path: extension.vsix
 
       - name: Rename action
-        run: mv  /home/runner/work/namingbuddy/namingbuddy/extension.vsix ./namingbuddy-${{ needs.create-tag.outputs.tagname }}.vsix
+        run: mv extension.vsix ./namingbuddy-${{ needs.create-tag.outputs.tagname }}.vsix
 
       - name: Create release
         uses: softprops/action-gh-release@v2

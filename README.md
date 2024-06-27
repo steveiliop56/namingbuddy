@@ -1,6 +1,6 @@
 <div align="center">
     <h1>NamingBuddy</h1>
-    <p>A simple extension to help you generate variable/class/function names when you just can't think of a good name.</p>
+    <p>A simple extension to help you generate class, function and variable names when you just can't think of a good name</p>
     <img src="./images/usage.gif" />
 </div>
 

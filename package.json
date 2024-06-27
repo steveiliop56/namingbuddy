@@ -1,7 +1,7 @@
 {
   "name": "namingbuddy",
   "displayName": "namingbuddy",
-  "description": "A simple extension to help you name your variables/classes/functions using an ollama backend",
+  "description": "A simple extension to help you generate class, function and variable names when you just can't think of a good name",
   "repository": "https://github.com/steveiliop56/namingbuddy",
   "version": "0.1.0",
   "engines": {

@@ -1,7 +1,8 @@
 {
   "name": "namingbuddy",
   "displayName": "namingbuddy",
-  "description": "A simple extension to help you name your variables/classes/functions using an ollama backend.",
+  "description": "A simple extension to help you name your variables/classes/functions using an ollama backend",
+  "repository": "https://github.com/steveiliop56/namingbuddy",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.90.0"

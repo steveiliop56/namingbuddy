@@ -54,7 +54,7 @@ jobs:
           path: extension.vsix
 
       - name: Rename action
-        run: mv ./extension/extension.vsix namingbuddy-${{ needs.create-tag.outputs.tagname }}.vsix
+        run: mv $GITHUB_WORKSPACE/extension.vsix namingbuddy-${{ needs.create-tag.outputs.tagname }}.vsix
 
       - name: Create release
         uses: softprops/action-gh-release@v2

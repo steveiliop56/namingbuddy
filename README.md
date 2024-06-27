@@ -3,7 +3,7 @@
     <p>A simple extension to help you generate variable/class/function names when you just can't think of a good name other than `blahBlah` or `someFunction` or `fuck`.</p>
 </div>
 
-![Example](https://github.com/steveiliop56/namingbuddy/blob/examples/recording.mp4?raw=true)
+![Example](https://raw.githubusercontent.com/steveiliop56/namingbuddy/main/examples/recording.mp4)
 
 ### Features
 

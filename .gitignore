@@ -1,0 +1,14 @@
+# Mode Modules
+node_modules
+
+# Build
+out
+
+# Dist
+dist
+
+# VsCode Tests
+.vscode-test
+
+# Extension Files
+*.vsix

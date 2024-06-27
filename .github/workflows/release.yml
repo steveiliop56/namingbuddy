@@ -51,10 +51,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: extension
-          path: ./extension.vsix
+          path: extension
 
       - name: test
-        run: ls -lah
+        run: ls -lah extension
 
       # - name: Rename action
       #   run: mv extension.vsix ./namingbuddy-${{ needs.create-tag.outputs.tagname }}.vsix
